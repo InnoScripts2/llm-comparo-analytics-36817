@@ -1,69 +1,57 @@
-# Welcome to your Lovable project
+# Панель сравнения LLM
 
-## Project info
+Интерактивное веб-приложение для оценки и сравнения производительности крупных языковых моделей. Интерфейс предоставляет карточки с основными метриками, поле для ввода промптов и график динамики качества ответов.
 
-**URL**: https://lovable.dev/projects/d7afc8be-8140-436c-8920-4b449110ec45
+## Основные возможности
 
-## How can I edit this code?
+- Сравнение популярных LLM по задержке, скорости генерации и качеству
+- Ввод пользовательских промптов и уведомления о статусе сравнения
+- Визуализация истории метрик на линейном графике
+- Адаптивный интерфейс на базе React, TypeScript и Tailwind CSS
 
-There are several ways of editing your application.
+## Требования
 
-**Use Lovable**
+- Node.js 18 или новее
+- npm 9 или новее
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d7afc8be-8140-436c-8920-4b449110ec45) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Как запустить проект локально
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+git clone <URL_РЕПОЗИТОРИЯ>
+cd <ИМЯ_ПРОЕКТА>
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+После запуска перейдите по адресу `http://localhost:5173`, чтобы открыть приложение в браузере. Для изменения порта обновите конфигурацию Vite в `vite.config.ts`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Доступные команды
 
-**Use GitHub Codespaces**
+- `npm run dev` — запуск режима разработки с горячей перезагрузкой
+- `npm run build` — сборка оптимизированной production-версии
+- `npm run preview` — предпросмотр собранного приложения
+- `npm run lint` — проверка кода линтером
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Стек технологий
 
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
+- Vite и React с плагином SWC
 - TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Tailwind CSS и shadcn/ui
+- @tanstack/react-query для работы с данными
+- Recharts для визуализации показателей
 
-## How can I deploy this project?
+## Структура проекта
 
-Simply open [Lovable](https://lovable.dev/projects/d7afc8be-8140-436c-8920-4b449110ec45) and click on Share -> Publish.
+- `src/pages` — страницы приложения
+- `src/components` — композиционные и UI-компоненты
+- `src/hooks` — пользовательские хуки
+- `src/lib` — утилиты
+- `public` — статические ресурсы
 
-## I want to use a custom domain - is that possible?
+## Деплой
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Соберите приложение командой `npm run build`, после чего опубликуйте содержимое папки `dist` на выбранной платформе (например, Vercel, Netlify или любой статический хостинг).
+
+## Лицензия
+
+Добавьте информацию о лицензии вашего проекта (при необходимости).

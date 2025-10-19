@@ -15,7 +15,7 @@ export function ComparisonCard({ model, responseTime, tokensPerSecond, qualitySc
         <CardTitle className="flex items-center justify-between">
           <span>{model}</span>
           <Badge variant="outline" className="ml-2">
-            {qualityScore.toFixed(1)}/10
+            Рейтинг: {qualityScore.toFixed(1)}/10
           </Badge>
         </CardTitle>
       </CardHeader>
@@ -23,11 +23,13 @@ export function ComparisonCard({ model, responseTime, tokensPerSecond, qualitySc
         <div className="space-y-4">
           <div>
             <p className="text-sm font-medium">Время отклика</p>
-            <p className="text-2xl font-bold">{responseTime.toFixed(2)}мс</p>
+            <p className="text-2xl font-bold">≈ {responseTime.toFixed(0)} мс</p>
           </div>
           <div>
-            <p className="text-sm font-medium">Токенов/сек</p>
-            <p className="text-2xl font-bold">{tokensPerSecond}</p>
+            <p className="text-sm font-medium">Скорость генерации</p>
+            <p className="text-2xl font-bold">
+              ≈ {tokensPerSecond.toFixed(0)} токенов/с
+            </p>
           </div>
         </div>
       </CardContent>
