@@ -22,11 +22,11 @@ export function ComparisonCard({ model, responseTime, tokensPerSecond, qualitySc
       <CardContent>
         <div className="space-y-4">
           <div>
-            <p className="text-sm font-medium">Response Time</p>
-            <p className="text-2xl font-bold">{responseTime.toFixed(2)}ms</p>
+            <p className="text-sm font-medium">Время отклика</p>
+            <p className="text-2xl font-bold">{responseTime.toFixed(2)}мс</p>
           </div>
           <div>
-            <p className="text-sm font-medium">Tokens/Second</p>
+            <p className="text-sm font-medium">Токенов/сек</p>
             <p className="text-2xl font-bold">{tokensPerSecond}</p>
           </div>
         </div>

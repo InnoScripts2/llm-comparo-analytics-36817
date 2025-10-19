@@ -34,8 +34,8 @@ export function ComparisonDashboard() {
   const handleCompare = async () => {
     if (!prompt.trim()) {
       toast({
-        title: "Error",
-        description: "Please enter a prompt to compare",
+        title: "Ошибка",
+        description: "Пожалуйста, введите промпт для сравнения",
         variant: "destructive",
       });
       return;
@@ -49,15 +49,15 @@ export function ComparisonDashboard() {
   return (
     <div className="container mx-auto py-8 space-y-8 bg-background">
       <div className="space-y-4">
-        <h1 className="text-4xl font-bold text-foreground">LLM Performance Comparison</h1>
+        <h1 className="text-4xl font-bold text-foreground">Сравнение производительности LLM</h1>
         <p className="text-muted-foreground">
-          Compare different language models in real-time
+          Сравнивайте различные языковые модели в режиме реального времени
         </p>
       </div>
 
       <div className="grid gap-6">
         <Textarea
-          placeholder="Enter your prompt here..."
+          placeholder="Введите ваш промпт здесь..."
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           className="min-h-[100px] bg-card text-card-foreground"
@@ -67,7 +67,7 @@ export function ComparisonDashboard() {
           disabled={isComparing}
           className="w-full md:w-auto bg-primary text-primary-foreground hover:bg-primary/90"
         >
-          {isComparing ? "Comparing..." : "Compare Models"}
+          {isComparing ? "Сравнение..." : "Сравнить модели"}
         </Button>
       </div>
 
